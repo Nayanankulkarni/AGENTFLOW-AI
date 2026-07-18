@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgentFlow AI</title>
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <img src="logo.png" alt="AgentFlow AI">
+
+            <div>
+
+                <h2>AgentFlow AI</h2>
+
+                <span>Intelligent Workflow Assistant</span>
+
+            </div>
+
+        </div>
+
+        <button class="new-chat" id="newChat">
+
+            <i class="fa-solid fa-plus"></i>
+
+            New Chat
+
+        </button>
+
+        <nav class="menu">
+
+            <button class="menu-item active" id="chatMenu">
+
+                <i class="fa-regular fa-comments"></i>
+
+                <span>Chat</span>
+
+            </button>
+
+            <button class="menu-item" id="knowledgeBase">
+
+                <i class="fa-solid fa-book-open"></i>
+
+                <span>Knowledge Base</span>
+
+            </button>
+
+            <button class="menu-item" id="aboutAI">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                <span>About</span>
+
+            </button>
+
+        </nav>
+
+        <div class="assistant-card">
+
+            <img src="logo.png" alt="AgentFlow AI">
+
+            <h3>AgentFlow AI</h3>
+
+            <p>Powered by OpenAI + n8n</p>
+
+            <small>Always Ready 🚀</small>
+
+        </div>
+
+    </aside>
+
+    <!-- ================= Main ================= -->
+
+    <main class="main">
+
+        <!-- Hero -->
+
+        <section class="hero" id="heroSection">
+
+            <div class="hero-icon">
+
+                <i class="fa-solid fa-robot"></i>
+
+            </div>
+
+            <h1>Welcome to AgentFlow AI</h1>
+
+            <p>
+
+                Your intelligent workflow assistant powered by OpenAI and n8n.
+
+            </p>
+
+        </section>
+
+        <!-- Chat Messages -->
+
+        <section class="messages" id="messages">
+
+            <div class="bot-message">
+
+                <div class="bubble">
+
+                    <h3>👋 Hello!</h3>
+
+                    <p>
+
+                        I'm AgentFlow AI.
+
+                    </p>
+
+                    <br>
+
+                    <p>
+
+                        I can help with:
+
+                    </p>
+
+                    <ul>
+
+                        <li>💬 AI Chat</li>
+
+                        <li>💻 Coding</li>
+
+                        <li>📚 Learning</li>
+
+                        <li>⚡ Automation</li>
+
+                        <li>🧠 Problem Solving</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+                <!-- ========================= -->
+        <!-- Chat Input -->
+        <!-- ========================= -->
+
+        <div class="chat-input">
+
+            <button id="attachBtn" class="icon-btn">
+
+                <i class="fa-solid fa-paperclip"></i>
+
+            </button>
+
+            <input
+                type="text"
+                id="userInput"
+                placeholder="Message AgentFlow AI..."
+                autocomplete="off"
+            >
+
+            <button id="sendBtn" class="send-btn">
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+            </button>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- Knowledge Base -->
+        <!-- ========================= -->
+
+        <section class="page hidden" id="knowledgePage">
+
+            <div class="page-content">
+
+                <h2>
+
+                    <i class="fa-solid fa-book"></i>
+
+                    Knowledge Base
+
+                </h2>
+
+                <p>
+
+                    AgentFlow AI combines conversational AI with workflow
+                    automation to help you work faster and smarter.
+
+                </p>
+
+                <div class="feature-grid">
+
+                    <div class="feature-card">
+
+                        <i class="fa-solid fa-robot"></i>
+
+                        <h3>AI Chat</h3>
+
+                        <p>
+
+                            Natural conversations powered by OpenAI.
+
+                        </p>
+
+                    </div>
+
+                    <div class="feature-card">
+
+                        <i class="fa-solid fa-code"></i>
+
+                        <h3>Programming</h3>
+
+                        <p>
+
+                            Debug code, explain concepts and generate projects.
+
+                        </p>
+
+                    </div>
+
+                    <div class="feature-card">
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                        <h3>Automation</h3>
+
+                        <p>
+
+                            Powered by n8n workflows for intelligent automation.
+
+                        </p>
+
+                    </div>
+
+                    <div class="feature-card">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        <h3>Learning</h3>
+
+                        <p>
+
+                            Learn faster with AI-assisted explanations.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- About -->
+        <!-- ========================= -->
+
+        <section class="page hidden" id="aboutPage">
+
+            <div class="page-content">
+
+                <h2>
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    About AgentFlow AI
+
+                </h2>
+
+                <p>
+
+                    <strong>Version:</strong> 2.0
+
+                </p>
+
+                <br>
+
+                <p>
+
+                    AgentFlow AI is an intelligent assistant built using modern
+                    web technologies and OpenAI integrated with n8n workflows.
+
+                </p>
+
+                <br>
+
+                <h3>Technology Stack</h3>
+
+                <ul>
+
+                    <li>🤖 OpenAI</li>
+
+                    <li>⚡ n8n Cloud</li>
+
+                    <li>🌐 HTML5</li>
+
+                    <li>🎨 CSS3</li>
+
+                    <li>📜 JavaScript</li>
+
+                    <li>🔗 Webhooks</li>
+
+                </ul>
+
+                <br>
+
+                <h3>Features</h3>
+
+                <ul>
+
+                    <li>✔ AI Chat</li>
+
+                    <li>✔ Coding Assistant</li>
+
+                    <li>✔ Workflow Automation</li>
+
+                    <li>✔ Fast Responses</li>
+
+                    <li>✔ Responsive UI</li>
+
+                </ul>
+
+                <br>
+
+                <h3>Developer</h3>
+
+                <p>
+
+                    Nayana N. Kulkarni
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<footer>
+
+    <p>
+
+        © 2026 AgentFlow AI • Powered by OpenAI & n8n
+
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
